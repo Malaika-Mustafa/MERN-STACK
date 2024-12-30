@@ -1,0 +1,239 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #4A90E2;
+}
+
+hr {
+    border: 1px double #e1e4eb;
+}
+
+/* Forms Styling */
+.student-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.student-form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #4A90E2;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"],input[type="email"]:focus {
+    border-color: #4A90E2;
+}
+
+input[type="submit"] {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #357ABD;
+}
+
+/* Table Styling */
+.student-table {
+    max-width: 90%;
+    margin: 20px auto;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    overflow-x: auto;
+}
+
+thead {
+    background: #4A90E2;
+    color: white;
+    text-transform: uppercase;
+}
+
+thead th {
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #f1f5fc;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+button {
+    border: none;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button[onClick^="onEdit"] {
+    background: #28A745; /* Green for Edit */
+    color: white;
+    width:60px;
+}
+
+button[onClick^="onEdit"]:hover {
+    background: #3bce5b;
+}
+
+button[onClick^="onDelete"] {
+    background: #DC3545; /* Red for Delete */
+    color: white;
+}
+
+button[onClick^="onDelete"]:hover {
+    background: #f33a4c;
+}
+
+/* Update Modal Styling */
+.update-form {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.update-form div {
+    margin-bottom: 15px;
+}
+
+.update-form input[type="submit"] {
+    width: 100%;
+}
+
+/* Delete Modal Styling */
+.delete {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.delete p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.delete button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+}
+
+.delete button#yes {
+    background: #16831c;
+}
+
+.delete button#yes:hover {
+    background: #1f9e29;
+}
+
+.delete button#no {
+    background: #c52b2b;
+}
+
+.delete button#no:hover {
+    background: #c03030;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-form, .update-form {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

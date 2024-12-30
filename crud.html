@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+         CRUD
+    </title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+
+<body>
+	<h1><center> CRUD </center></h1>
+	<hr>
+    <div class="student-form">
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div>
+                <label>Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name " required>
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label>Phone Number:</label>
+                <input type="text" name="phoneNo" id="phoneNo" placeholder="Enter your phone number"  required>
+            </div>
+            <div>
+                <label>Address:</label>
+                <input type="text" name="address" id="address" placeholder="Enter your address"  required>
+            </div>
+            <div  class="form-action-buttons">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <br/>
+    <div class = "student-table">
+            <table class="list" id="studentList">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+    </div>
+
+    <div id="update-form" class="update-form">
+        <form  onsubmit="event.preventDefault();onUpdatedFormSubmit();" autocomplete="off">
+            <div>
+                <label>Name:</label>
+                <input type="text" name="newName" id="newName" required>
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="newEmail" id="newEmail" required>
+            </div>
+            <div>
+                <label>Phone Number:</label>
+                <input type="text" name="newPhoneNo" id="newPhoneNo" required>
+            </div>
+            <div>
+                <label>Address:</label>
+                <input type="text" name="newAddress" id="newAddress" required>
+            </div>
+            <div  class="form-update-action-buttons">
+                <input type="submit" value="Save">
+            </div>
+            
+        </form>
+    </div>
+    <div id="delete" class="delete" style="display: none;">
+        <p> Are you sure to delete this record ?</p>
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+    <script src="crud.js"></script>
+</body>
+</html>
+
+
+
